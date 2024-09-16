@@ -75,6 +75,11 @@ end
 function game.load_location(id)
 	game.clear_location()
 	game.text = game.locations[id]["text"]
+	local links = game.locations[id]["links"]
+	for i = 1, #links do
+		table.insert(game.links.text, links[i].text)
+		table.insert(game.links.location, links[i].location)
+	end	
 end
 
 function game.mousepressed(x, y)
