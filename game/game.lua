@@ -1,11 +1,15 @@
 local game = {
 	lines = {},
+	background = nil,
+	
+	locations = {},
+	
 	text = "",
 	links = {
 		text = {},
 		location = {},
-		commands = {},
 	},
+	commands = {},
 }
 
 function mouse_in_rect(x, y, left, top, width, height)
@@ -41,6 +45,10 @@ function split_string(text)
 end
 
 function game.load()
+	game.background = love.graphics.newImage("assets/backgrounds/background.png")
+	local file, size = love.filesystem.read("assets/game.json")
+	local data = json.decode(file)
+	game.locations = data["locations"]
 	game.load_location(1)
 end
 
@@ -48,12 +56,13 @@ function game.clear_location()
 	game.text = ""
 	game.links = {
 		text = {},
-		location = {},
-		commands = {},
+		location = {}
 	}
+	commands = {}
 end
 
 function game.draw_location()
+	love.graphics.draw(game.background, 0, 0)
 	game.lines = split_string(game.text)
 	for i = 1, #game.lines do
 		love.graphics.print(game.lines[i], config.font.width, i * config.font.height)
@@ -65,12 +74,7 @@ end
 
 function game.load_location(id)
 	game.clear_location()
-	
-	local file, size = love.filesystem.read("assets/game.json")
-	local data = json.decode(file)
-	local locations = data["locations"]
-	
-	game.text = locations[id]["text"]
+	game.text = game.locations[id]["text"]
 end
 
 function game.mousepressed(x, y)
