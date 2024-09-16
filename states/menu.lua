@@ -15,7 +15,7 @@ function state.update(dt)
 end
 
 function state.draw()
-
+	game.draw_location()
 end
 
 function state.keypressed(key, unicode)

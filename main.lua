@@ -6,6 +6,9 @@ function love.load(args)
 	love.window.setVSync(1)
 	timer = libtimer()
 	
+	font.load()
+	game.load()
+	
 	states.setup()
 	states.switch("menu")
 	states.enter()

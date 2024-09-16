@@ -5,6 +5,15 @@ config = {
 		fullscreen = false,
 	},
 	
+	font = {
+		width = 25,
+		height = 35,
+	},
+	
+	text = {
+		width = 100,
+	},
+	
 	debug = true,
 	
 	audio = {
