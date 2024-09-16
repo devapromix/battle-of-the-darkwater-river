@@ -1,19 +1,9 @@
 local game = {
 	lines = {},
-
 	text = "",
-	links = {},
-
-	text = "Громкие завывания разочаровавшихся гоблинов ясно свидетельствуют о протесте, но Вы настаиваете на своем. Главный нарушитель спокойствия - гоблин по имени Черноглаз - бросает вызов вашему авторитету. Он заявляет о том, что они будут делать что хотят и никто им в этом не будет помехой. Некоторые гоблины начинают соглашаться с ним...",
 	links = {
-		text = {
-			"Отступить и дать им свободу выбора...",
-			"Попытаться убить Черноглаза из-за неповиновения...",
-			},
-		location = {
-			1,
-			2,
-		},
+		text = {},
+		location = {},
 		commands = {},
 	},
 }
@@ -51,7 +41,7 @@ function split_string(text)
 end
 
 function game.load()
-
+	game.load_location(1)
 end
 
 function game.clear_location()
@@ -73,13 +63,14 @@ function game.draw_location()
 	end
 end
 
-function game.next_location(location_id)
+function game.load_location(id)
 	game.clear_location()
-	game.load_location(location_id)
-end
-
-function game.load_location(location_id)
-
+	
+	local file, size = love.filesystem.read("assets/game.json")
+	local data = json.decode(file)
+	local locations = data["locations"]
+	
+	game.text = locations[id]["text"]
 end
 
 function game.mousepressed(x, y)
@@ -94,7 +85,7 @@ function game.mousepressed(x, y)
 		end
 	end
 	if line > 0 and line <= #game.links.text then
-		game.next_location(game.links.location[line])
+		game.load_location(game.links.location[line])
 	end
 end
 
@@ -108,7 +99,7 @@ function game.keypressed(key)
 		line = 3
 	end
 	if line > 0 and line <= #game.links.text then
-		game.next_location(game.links.location[line])
+		game.load_location(game.links.location[line])
 	end
 end
 
