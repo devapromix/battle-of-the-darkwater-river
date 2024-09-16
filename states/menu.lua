@@ -19,13 +19,14 @@ function state.draw()
 end
 
 function state.keypressed(key, unicode)
+	game.keypressed(key)
 	if key == "escape" then
 		state.hide()
 	end
 end
 
-function state.mousepressed( x, y, button, istouch, presses )
-	
+function state.mousepressed(x, y, button, istouch, presses)
+	game.mousepressed(x, y)
 end
 
 return state
