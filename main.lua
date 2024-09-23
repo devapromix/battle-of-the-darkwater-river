@@ -15,7 +15,13 @@ function love.load(args)
 end
 
 function love.draw()
-	states.draw()
+    love.graphics.push()
+    local sx = love.graphics.getPixelWidth() / window.width
+    local sy = love.graphics.getPixelHeight() / window.height
+    love.graphics.scale(sx, sy)
+    local mx, my = love.mouse.getPosition()
+	states.draw(mx / sx, my / sy)
+    love.graphics.pop()
 end
 
 function love.update(dt)

@@ -89,7 +89,7 @@ function game.mousepressed(x, y)
 	for i = 1, 3 do
 		if mouse_in_rect(x, y, config.font.width, 
 			(#game.lines + i + 1) * config.font.height, 
-			config.window.width - (config.font.width * 2), 
+			window.width - (config.font.width * 2), 
 			config.font.height) then
 			line = i
 			break

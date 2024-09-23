@@ -1,10 +1,4 @@
 config = {
-	window = {
-		width = 1280,
-		height = 800,
-		fullscreen = true,
-	},
-	
 	font = {
 		width = 25,
 		height = 35,
@@ -23,13 +17,22 @@ config = {
 	game = {
 		name = 'Битва у Темноводной Реки',
 		version = '0.1',
+	},
+	
+	gui = {
+		scale = 4,
 	}
 }
 
+window = {
+	width = 1280,
+	height = 800,
+	fullscreen = true,
+}
 
 function love.conf (t)
 	t.console = config.debug
-	t.window.fullscreen = config.window.fullscreen
+	t.window.fullscreen = window.fullscreen
 	t.window.msaa = 0
 	t.window.fsaa = 0
 	t.window.display = 1
@@ -37,7 +40,7 @@ function love.conf (t)
 	t.window.vsync = false
 	t.identity = 'BattleoftheDarkwaterRiver'..config.game.version
 	t.window.title = config.game.name
-	t.window.width = config.window.width
-	t.window.height = config.window.height
+	t.window.width = window.width
+	t.window.height = window.height
 	t.window.icon = "assets/icons/game.png"
 end
