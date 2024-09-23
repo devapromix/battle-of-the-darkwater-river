@@ -46,7 +46,7 @@ end
 
 function game.load()
 	game.background = love.graphics.newImage("assets/backgrounds/background.png")
-	local file, size = love.filesystem.read("assets/game.json")
+	local file, size = love.filesystem.read("assets/data/game.json")
 	local data = json.decode(file)
 	game.locations = data["locations"]
 	game.load_location(1)

@@ -1,8 +1,8 @@
 config = {
 	window = {
-		width = 1100,
-		height = 600,
-		fullscreen = false,
+		width = 1280,
+		height = 800,
+		fullscreen = true,
 	},
 	
 	font = {
