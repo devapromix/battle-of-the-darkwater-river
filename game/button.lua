@@ -40,7 +40,7 @@ function button:new(left, top, width, height, text, action, active, sound)
 
 	current.draw = function()
 		draw(default)
-		if mouse_in(left, top, width, height) then
+		if mouse.in_rect(left, top, width, height) then
 			if love.mouse.isDown(1) then
 				draw(default)
 			else
@@ -73,7 +73,7 @@ function button:new(left, top, width, height, text, action, active, sound)
 	end
 	
 	current.update = function()
-		if mouse_in(_left, _top, _width, _height) then
+		if mouse.in_rect(_left, _top, _width, _height) then
 			if _active and _sound ~= nil then _sound:play() end
 			_action()
 		end

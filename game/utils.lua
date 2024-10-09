@@ -351,11 +351,6 @@ function get_top(aheight)
 	return math.floor((window.height - aheight) / 2)
 end
 
-function mouse_in(left, top, width, height)
-	local x, y = mouse.get_pos()
-	return (x >= left) and (y >= top) and (x <= left + width) and (y <= top + height)
-end
-
 function get_grid_position(mx, my)
 	local x = math.floor(mx / config.map.tile.width) + 1
 	local y = math.floor((my - config.bar.height) / config.map.tile.height) + 1
