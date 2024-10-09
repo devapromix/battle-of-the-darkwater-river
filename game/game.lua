@@ -12,34 +12,6 @@ local game = {
 	commands = {},
 }
 
-function split(s, pat)
-   local i = 1
-   result = {}
-   while true do
-      a, b = s:find(pat, i)
-      if a then
-         table.insert(result, s:sub(i, a - 1))
-         i = b + 1
-      else
-         table.insert(result, s:sub(i))
-         break
-      end
-   end
-   return result
-end
-
-function split_string(text, width)
-   local lines = {}
-   for _, w in ipairs(split(text, ' ')) do
-      if #lines > 0 and w:len() + lines[#lines]:len() + 1 < width then
-         lines[#lines] = lines[#lines] .. ' ' .. w
-      else
-         table.insert(lines, w)
-      end
-   end
-   return lines
-end
-
 function game.load()
 	game.background = love.graphics.newImage("assets/backgrounds/background.png")
 	local file, size = love.filesystem.read("assets/data/game.json")
@@ -59,7 +31,7 @@ end
 
 function game.draw_location()
 	love.graphics.draw(game.background, 0, 0)
-	game.lines = split_string(game.text, config.text.width)
+	game.lines = string.split_text(game.text, config.text.width)
 	for i = 1, #game.lines do
 		love.graphics.print(game.lines[i], config.font.width, i * config.font.height)
 	end
