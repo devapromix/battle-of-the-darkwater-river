@@ -12,10 +12,6 @@ local game = {
 	commands = {},
 }
 
-function mouse_in_rect(x, y, left, top, width, height)
-	return (x >= left) and (y >= top) and (x <= left + width) and (y <= top + height)
-end
-
 function split(s, pat)
    local i = 1
    result = {}
@@ -32,10 +28,10 @@ function split(s, pat)
    return result
 end
 
-function split_string(text)
+function split_string(text, width)
    local lines = {}
    for _, w in ipairs(split(text, ' ')) do
-      if #lines > 0 and w:len() + lines[#lines]:len() + 1 < config.text.width then
+      if #lines > 0 and w:len() + lines[#lines]:len() + 1 < width then
          lines[#lines] = lines[#lines] .. ' ' .. w
       else
          table.insert(lines, w)
@@ -63,7 +59,7 @@ end
 
 function game.draw_location()
 	love.graphics.draw(game.background, 0, 0)
-	game.lines = split_string(game.text)
+	game.lines = split_string(game.text, config.text.width)
 	for i = 1, #game.lines do
 		love.graphics.print(game.lines[i], config.font.width, i * config.font.height)
 	end
@@ -87,7 +83,7 @@ end
 function game.mousepressed(x, y)
 	local line = 0
 	for i = 1, 3 do
-		if mouse_in_rect(x, y, config.font.width, 
+		if mouse.in_rect(config.font.width, 
 			(#game.lines + i + 1) * config.font.height, 
 			window.width - (config.font.width * 2), 
 			config.font.height) then
