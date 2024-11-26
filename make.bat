@@ -10,4 +10,5 @@ copy /b love.exe+goblins.love goblins.exe
 copy goblins.zip ..\
 del goblins.*
 del *.ico
+del *.txt
 pause

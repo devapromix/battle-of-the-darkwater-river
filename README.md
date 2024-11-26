@@ -1,2 +1,2 @@
-# Battle of the Darkwater River
+# Goblins
 Interactive fiction game
