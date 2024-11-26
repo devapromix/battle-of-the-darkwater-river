@@ -8,6 +8,10 @@ config = {
 		width = 100,
 	},
 	
+	panel = {
+		left = 1350,
+	},
+	
 	debug = true,
 	
 	audio = {

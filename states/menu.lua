@@ -1,8 +1,8 @@
 local state = {}
 
-local buttons = {}
+--local buttons = {}
 
-table.insert(buttons, button:new(10, 10, 210, 70, 'new game', function()  end, true))
+--table.insert(buttons, button:new(10, 10, 420, 70, 'new game +++++', function()  end, true))
 
 function state.hide()
 	timer:after(0.25, function()
@@ -20,7 +20,8 @@ end
 
 function state.draw()
 	game.draw_location()
-	for i = 1, #buttons do buttons[i].draw() end
+	game.draw_character()
+	--for i = 1, #buttons do buttons[i].draw() end
 end
 
 function state.keypressed(key, unicode)
@@ -32,7 +33,7 @@ end
 
 function state.mousepressed(x, y, button, istouch, presses)
 	game.mousepressed(x, y)
-	for i = 1, #buttons do buttons[i].update() end
+	--for i = 1, #buttons do buttons[i].update() end
 end
 
 return state

@@ -40,6 +40,13 @@ function game.draw_location()
 	end
 end
 
+function game.draw_character()
+	local y = 1
+	love.graphics.print(player.name, config.panel.left, y * config.font.height)
+	y = y + 1
+	love.graphics.print("health: " .. player.health, config.panel.left, y * config.font.height)
+end
+
 function game.load_location(index)
 	game.clear_location()
 	if index < #game.locations then
