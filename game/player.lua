@@ -1,5 +1,5 @@
 local player = {
-	name = "DRAGONHUNTER",
+	name = "GOBLINHUNTER",
 	health = 100,
 }
 

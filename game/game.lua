@@ -29,8 +29,22 @@ function game.clear_location()
 	commands = {}
 end
 
+function game.execute_commands(commands)
+    if commands and commands ~= "" then
+        local func, err = load("return " .. commands)
+        if func then
+            local success, result = pcall(func)
+            if not success then
+                print("Error executing commands: " .. result)
+            end
+        else
+            print("Error loading commands: " .. err)
+        end
+    end
+end
+
 function game.draw_location()
-	love.graphics.draw(game.background, 0, 0)
+	--love.graphics.draw(game.background, 0, 0)
 	game.lines = string.split_text(game.text, config.text.width)
 	for i = 1, #game.lines do
 		love.graphics.print(game.lines[i], config.font.width, i * config.font.height)
@@ -51,6 +65,8 @@ function game.load_location(index)
 	game.clear_location()
 	if index < #game.locations then
 		game.text = game.locations[index]["text"]
+		game.commands = game.locations[index]["commands"]
+		game.execute_commands(game.commands)
 		local links = game.locations[index]["links"]
 		for i = 1, #links do
 			table.insert(game.links.text, links[i].text)

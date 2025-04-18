@@ -3,7 +3,7 @@ require "import"
 function love.load(args)
 	math.randomseed(os.time())
 	love.graphics.setDefaultFilter("nearest", "nearest")
-	love.window.setVSync(1)
+	--love.window.setVSync(1)
 	timer = libtimer()
 	
 	font.load()
@@ -16,8 +16,8 @@ end
 
 function love.draw()
 	love.graphics.push()
-	local sx = love.graphics.getPixelWidth() / window.width
-	local sy = love.graphics.getPixelHeight() / window.height
+	local sx = love.graphics.getWidth() / window.width
+	local sy = love.graphics.getHeight() / window.height
 	love.graphics.scale(sx, sy)
 	local mx, my = love.mouse.getPosition()
 	mouse.set_pos(mx / sx, my / sy)
