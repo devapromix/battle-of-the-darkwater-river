@@ -2,31 +2,31 @@
 	"locations":[
 		{
 			"location":1,
-			"text":"First location.",
+			"text":"Room 1.",
 			"links":[
 				{
 					"file":"",
 					"location":2,
-					"text":"Sec location.",
+					"text":"Room 2.",
 					"commands":""
 				},
 				{
-					"file":"assets/data/room.json",
-					"location":1,
-					"text":"Go to room.",
+					"file":"assets/data/game.json",
+					"location":2,
+					"text":"Prev location #2.",
 					"commands":""
 				}
 			],
-			"commands":""
+			"commands":"player.health = 10"
 		},
 		{
 			"location":2,
-			"text":"Second location!",
+			"text":"Room 2.",
 			"links":[
 				{
 					"file":"",
 					"location":1,
-					"text":"Back.",
+					"text":"Room 1.",
 					"commands":""
 				}
 			],

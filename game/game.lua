@@ -1,11 +1,13 @@
 local game = {
 	lines = {},
 	background = nil,
+	current_file = nil,
 	
 	locations = {},
 	
 	text = "",
 	links = {
+		file = {},
 		text = {},
 		location = {},
 		commands = {},
@@ -15,15 +17,13 @@ local game = {
 
 function game.load()
 	game.background = love.graphics.newImage("assets/backgrounds/background.png")
-	local file, size = love.filesystem.read("assets/data/game.json")
-	local data = json.decode(file)
-	game.locations = data["locations"]
-	game.load_location(1)
+	game.load_location_from_file(1, "assets/data/game.json")
 end
 
 function game.clear_location()
 	game.text = ""
 	game.links = {
+		file = {},
 		text = {},
 		location = {},
 		commands = {}
@@ -71,10 +71,24 @@ function game.load_location(index)
 		game.execute_commands(game.commands)
 		local links = game.locations[index]["links"]
 		for i = 1, #links do
+			table.insert(game.links.file, links[i].file)
 			table.insert(game.links.text, links[i].text)
 			table.insert(game.links.location, links[i].location)
 		end
 	end	
+end
+
+function game.load_location_from_file(index, cur_file)
+	if cur_file and cur_file ~= "" then
+		game.current_file = cur_file
+		local file, size = love.filesystem.read(game.current_file)
+		local data = json.decode(file)
+		game.location = {}
+		game.locations = data["locations"]
+	end
+	if game.current_file ~= nil then
+		game.load_location(index)
+	end
 end
 
 function game.mousepressed(x, y)
@@ -88,9 +102,7 @@ function game.mousepressed(x, y)
 			break
 		end
 	end
-	if line > 0 and line <= #game.links.text then
-		game.load_location(game.links.location[line])
-	end
+	game.go_to_location(line)
 end
 
 function game.keypressed(key)
@@ -102,8 +114,16 @@ function game.keypressed(key)
 	elseif key == "3" then
 		line = 3
 	end
-	if line > 0 and line <= #game.links.text then
-		game.load_location(game.links.location[line])
+	game.go_to_location(line)
+end
+
+function game.go_to_location(index)
+	if index > 0 and index <= #game.links.text then
+		if game.links.file[index] ~= "" then
+			game.load_location_from_file(game.links.location[index], game.links.file[index])
+		else
+			game.load_location(game.links.location[index])
+		end
 	end
 end
 
