@@ -11,6 +11,12 @@
 					"commands":""
 				},
 				{
+					"file":"",
+					"location":1,
+					"text":"Quit.",
+					"commands":"love.event.quit()"
+				},
+				{
 					"file":"assets/data/room.json",
 					"location":1,
 					"text":"Go to room.",

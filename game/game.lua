@@ -74,6 +74,7 @@ function game.load_location(index)
 			table.insert(game.links.file, links[i].file)
 			table.insert(game.links.text, links[i].text)
 			table.insert(game.links.location, links[i].location)
+			table.insert(game.links.commands, links[i].commands)
 		end
 	end	
 end
@@ -119,6 +120,7 @@ end
 
 function game.go_to_location(index)
 	if index > 0 and index <= #game.links.text then
+		game.execute_commands(game.links.commands[index])
 		if game.links.file[index] ~= "" then
 			game.load_location_from_file(game.links.location[index], game.links.file[index])
 		else
