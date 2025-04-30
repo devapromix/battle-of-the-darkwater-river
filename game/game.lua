@@ -8,6 +8,7 @@ local game = {
 	links = {
 		text = {},
 		location = {},
+		commands = {},
 	},
 	commands = {},
 }
@@ -24,14 +25,15 @@ function game.clear_location()
 	game.text = ""
 	game.links = {
 		text = {},
-		location = {}
+		location = {},
+		commands = {}
 	}
 	commands = {}
 end
 
 function game.execute_commands(commands)
     if commands and commands ~= "" then
-        local func, err = load("return " .. commands)
+        local func, err = load(commands)
         if func then
             local success, result = pcall(func)
             if not success then
@@ -63,7 +65,7 @@ end
 
 function game.load_location(index)
 	game.clear_location()
-	if index < #game.locations then
+	if index <= #game.locations then
 		game.text = game.locations[index]["text"]
 		game.commands = game.locations[index]["commands"]
 		game.execute_commands(game.commands)
