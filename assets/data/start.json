@@ -1,0 +1,112 @@
+{
+  "locations": [
+    {
+      "location": 1,
+      "text": "The structure follows your original format with location IDs always being numeric values. The Quit option leads to a confirmation screen (location 6) that offers both returning to the menu or exiting the game completely (to location 0)",
+      "links": [
+        {
+          "file": "",
+          "location": 2,
+          "text": "Start New Game",
+          "commands": ""
+        },
+        {
+          "file": "",
+          "location": 3,
+          "text": "Item1",
+          "commands": ""
+        },
+        {
+          "file": "",
+          "location": 4,
+          "text": "Item2",
+          "commands": ""
+        },
+        {
+          "file": "",
+          "location": 5,
+          "text": "Item3",
+          "commands": ""
+        },
+        {
+          "file": "",
+          "location": 6,
+          "text": "Quit Game",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 2,
+      "text": "New Game Scene",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Return to Main Menu",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 3,
+      "text": "Item1 Scene",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Return to Main Menu",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 4,
+      "text": "Item2 Scene",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Return to Main Menu",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 5,
+      "text": "Item3 Scene",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Return to Main Menu",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 6,
+      "text": "Are you sure you want to quit?",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "No, Return to Main Menu",
+          "commands": ""
+        },
+        {
+          "file": "",
+          "location": 0,
+          "text": "Yes, Exit Game",
+          "commands": "love.event.quit()"
+        }
+      ],
+      "commands": ""
+    }
+  ]
+}

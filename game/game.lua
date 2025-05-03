@@ -17,7 +17,7 @@ local game = {
 
 function game.load()
 	game.background = love.graphics.newImage("assets/backgrounds/background.png")
-	game.load_location_from_file(1, "assets/data/game.json")
+	game.load_location_from_file(1, "assets/data/start.json")
 end
 
 function game.clear_location()
@@ -94,7 +94,7 @@ end
 
 function game.mousepressed(x, y)
 	local line = 0
-	for i = 1, 3 do
+	for i = 1, 7 do
 		if mouse.in_rect(config.font.width, 
 			(#game.lines + i + 1) * config.font.height, 
 			window.width - (config.font.width * 2), 
@@ -114,6 +114,14 @@ function game.keypressed(key)
 		line = 2
 	elseif key == "3" then
 		line = 3
+	elseif key == "4" then
+		line = 4
+	elseif key == "5" then
+		line = 5
+	elseif key == "6" then
+		line = 6
+	elseif key == "7" then
+		line = 7
 	end
 	game.go_to_location(line)
 end
