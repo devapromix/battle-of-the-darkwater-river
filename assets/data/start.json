@@ -35,7 +35,7 @@
           "commands": ""
         }
       ],
-      "commands": ""
+      "commands": "game.clear()"
     },
     {
       "location": 2,
@@ -52,8 +52,14 @@
     },
     {
       "location": 3,
-      "text": "Item1 Scene",
+      "text": "Health Potion Scene",
       "links": [
+        {
+          "file": "",
+          "location": 3,
+          "text": "Pickup a Health Potion",
+          "commands": "inventory.add_item(\"Health Potion\", 1)"
+        },
         {
           "file": "",
           "location": 1,
@@ -65,8 +71,14 @@
     },
     {
       "location": 4,
-      "text": "Item2 Scene",
+      "text": "Sword Scene",
       "links": [
+        {
+          "file": "",
+          "location": 4,
+          "text": "Pickup a Sword",
+          "commands": "if not inventory.has_item(\"Sword\", 1) then inventory.add_item(\"Sword\", 1) end"
+        },
         {
           "file": "",
           "location": 1,

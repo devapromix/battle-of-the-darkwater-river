@@ -20,7 +20,7 @@ end
 
 function state.draw()
 	game.draw_location()
-	game.draw_character()
+	game.draw_panel()
 	--for i = 1, #buttons do buttons[i].draw() end
 end
 

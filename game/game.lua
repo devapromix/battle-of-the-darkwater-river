@@ -20,6 +20,10 @@ function game.load()
 	game.load_location_from_file(1, "assets/data/start.json")
 end
 
+function game.clear()
+	player.clear()
+end
+
 function game.clear_location()
 	game.text = ""
 	game.links = {
@@ -56,11 +60,12 @@ function game.draw_location()
 	end
 end
 
-function game.draw_character()
+function game.draw_panel()
 	local y = 1
 	love.graphics.print(player.name, config.panel.left, y * config.font.height)
 	y = y + 1
 	love.graphics.print("health: " .. player.health, config.panel.left, y * config.font.height)
+	inventory.draw(y)
 end
 
 function game.load_location(index)

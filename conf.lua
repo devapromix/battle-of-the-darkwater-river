@@ -5,11 +5,15 @@ config = {
 	},
 	
 	text = {
-		width = 100,
+		width = 60,
 	},
 	
 	panel = {
 		left = 1350,
+	},
+	
+	inventory = {
+		max_slots = 12,
 	},
 	
 	debug = true,
