@@ -36,7 +36,7 @@
       "text": "Warrior — a master of close combat, hardened by battles and tempered by pain. Warriors charge forward with shield raised and sword in hand, taking the blows of their enemies to protect their comrades. Their strength lies in resilience, discipline, and unyielding will. Where others flee, the warrior stands firm until the end.",
       "links": [
         {
-          "file": "",
+          "file": "assets/data/gate.json",
           "location": 1,
           "text": "Choose",
           "commands": "player.class = 'Warrior'"
@@ -55,7 +55,7 @@
       "text": "Ranger — a guide of wild lands, a marksman who never misses. Rangers avoid direct combat, relying instead on agility, keen sight, and knowledge of nature. Silent as the wind, they are as dangerous as a hungry wolf stalking its prey in the dark.",
       "links": [
         {
-          "file": "",
+          "file": "assets/data/gate.json",
           "location": 1,
           "text": "Choose",
           "commands": "player.class = 'Ranger'"
@@ -74,7 +74,7 @@
       "text": "Sorcerer — a wielder of mysterious powers, drawing strength from magical sources unseen by mortal eyes. Sorcerers study the arcane arts for years, and each spell they cast can alter the course of battle. Physically weak, they compensate with devastating and powerful magic.",
       "links": [
         {
-          "file": "",
+          "file": "assets/data/gate.json",
           "location": 1,
           "text": "Choose",
           "commands": "player.class = 'Sorcerer'"
