@@ -66,6 +66,8 @@ function game.draw_panel()
 	y = y + 1
 	love.graphics.print("Race: " .. player.race, config.panel.left, y * config.font.height)
 	y = y + 1
+	love.graphics.print("Class: " .. player.class, config.panel.left, y * config.font.height)
+	y = y + 1
 	love.graphics.print("Health: " .. player.health, config.panel.left, y * config.font.height)
 	inventory.draw(y)
 end

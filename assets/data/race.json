@@ -17,6 +17,12 @@
           "commands": ""
         },
         {
+          "file": "",
+          "location": 4,
+          "text": "Dwarf",
+          "commands": ""
+        },
+        {
           "file": "assets/data/start.json",
           "location": 1,
           "text": "Return to Main Menu",
@@ -53,6 +59,25 @@
           "location": 1,
           "text": "Choose",
           "commands": "player.race = 'Elf'"
+        },
+        {
+          "file": "",
+          "location": 1,
+          "text": "Back",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 4,
+      "text": "Dwarves — a hardy and resilient race that dwells in the depths of mountains and stone-carved cities. They are renowned for their endurance, craftsmanship, and unwavering loyalty to their clans. Dwarves rarely act in haste, but every decision they make is as firm and deliberate as the earth itself. They are not inclined toward magic, but make up for it with physical strength, battle experience, and iron discipline. For a dwarf, honor and duty come above all else, and any enemy who challenges their people will never be forgotten.",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Choose",
+          "commands": "player.race = 'Dwarf'"
         },
         {
           "file": "",
