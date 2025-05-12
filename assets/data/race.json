@@ -36,7 +36,7 @@
       "text": "Humans — one of the youngest but most numerous races in the world. They are known for their adaptability, determination, and desire to achieve great goals, even if it means facing great dangers. Humans can vary in character, from peaceful and thoughtful to brave and fearless. Their strength lies in their ability to unite and find solutions even in the most difficult situations. While humans don't live as long as some other races, their thirst for knowledge and desire for self-improvement give them great potential.",
       "links": [
         {
-          "file": "",
+          "file": "assets/data/class.json",
           "location": 1,
           "text": "Choose",
           "commands": "player.race = 'Human'"
@@ -55,7 +55,7 @@
       "text": "Elves — an ancient and noble race that has existed long before humans. They are known for their grace, deep connection to nature, and extraordinarily long lives. Elves are typically reserved, wise, and careful in their decisions. Their view of the world has been shaped by centuries of observation and experience. They are highly skilled in magic and often seek harmony, avoiding needless cruelty. Yet despite their calm nature, elves will fiercely defend what they hold sacred.",
       "links": [
         {
-          "file": "",
+          "file": "assets/data/class.json",
           "location": 1,
           "text": "Choose",
           "commands": "player.race = 'Elf'"
@@ -74,7 +74,7 @@
       "text": "Dwarves — a hardy and resilient race that dwells in the depths of mountains and stone-carved cities. They are renowned for their endurance, craftsmanship, and unwavering loyalty to their clans. Dwarves rarely act in haste, but every decision they make is as firm and deliberate as the earth itself. They are not inclined toward magic, but make up for it with physical strength, battle experience, and iron discipline. For a dwarf, honor and duty come above all else, and any enemy who challenges their people will never be forgotten.",
       "links": [
         {
-          "file": "",
+          "file": "assets/data/class.json",
           "location": 1,
           "text": "Choose",
           "commands": "player.race = 'Dwarf'"

@@ -1,0 +1,92 @@
+{
+  "locations": [
+    {
+      "location": 1,
+      "text": "Now, an important choice stands before you — to decide which path to walk, with what heart to fight, and how you will defend the future of the kingdom. Will you take responsibility for the fate of this land? Will you have the strength to stay true to yourself as darkness closes in? Your journey is only beginning, and it is up to you whether it becomes a legend remembered for generations.",
+      "links": [
+        {
+          "file": "",
+          "location": 2,
+          "text": "Warrior",
+          "commands": ""
+        },
+        {
+          "file": "",
+          "location": 3,
+          "text": "Ranger",
+          "commands": ""
+        },
+        {
+          "file": "",
+          "location": 4,
+          "text": "Sorcerer",
+          "commands": ""
+        },
+        {
+          "file": "assets/data/race.json",
+          "location": 1,
+          "text": "Back",
+          "commands": "player.class = '---'"
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 2,
+      "text": "Warrior — a master of close combat, hardened by battles and tempered by pain. Warriors charge forward with shield raised and sword in hand, taking the blows of their enemies to protect their comrades. Their strength lies in resilience, discipline, and unyielding will. Where others flee, the warrior stands firm until the end.",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Choose",
+          "commands": "player.class = 'Warrior'"
+        },
+        {
+          "file": "",
+          "location": 1,
+          "text": "Back",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 3,
+      "text": "Ranger — a guide of wild lands, a marksman who never misses. Rangers avoid direct combat, relying instead on agility, keen sight, and knowledge of nature. Silent as the wind, they are as dangerous as a hungry wolf stalking its prey in the dark.",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Choose",
+          "commands": "player.class = 'Ranger'"
+        },
+        {
+          "file": "",
+          "location": 1,
+          "text": "Back",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 4,
+      "text": "Sorcerer — a wielder of mysterious powers, drawing strength from magical sources unseen by mortal eyes. Sorcerers study the arcane arts for years, and each spell they cast can alter the course of battle. Physically weak, they compensate with devastating and powerful magic.",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Choose",
+          "commands": "player.class = 'Sorcerer'"
+        },
+        {
+          "file": "",
+          "location": 1,
+          "text": "Back",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    }
+  ]
+}
