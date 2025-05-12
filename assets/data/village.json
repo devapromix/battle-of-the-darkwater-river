@@ -7,7 +7,7 @@
         {
           "file": "assets/data/forest.json",
           "location": 1,
-          "text": "Refresh",
+          "text": "Enter the forest",
           "commands": ""
         },
         {
@@ -17,7 +17,7 @@
           "commands": ""
         }
       ],
-      "commands": "game.clear()"
+      "commands": ""
     },
     {
       "location": 2,
