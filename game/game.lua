@@ -64,7 +64,9 @@ function game.draw_panel()
 	local y = 1
 	love.graphics.print(player.name, config.panel.left, y * config.font.height)
 	y = y + 1
-	love.graphics.print("health: " .. player.health, config.panel.left, y * config.font.height)
+	love.graphics.print("Race: " .. player.race, config.panel.left, y * config.font.height)
+	y = y + 1
+	love.graphics.print("Health: " .. player.health, config.panel.left, y * config.font.height)
 	inventory.draw(y)
 end
 

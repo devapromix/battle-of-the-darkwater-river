@@ -1,6 +1,8 @@
 local player = {
+	race = "",
 	name = "GOBLINHUNTER",
 	health = 100,
+	
 }
 
 function player.clear()

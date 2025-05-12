@@ -1,0 +1,67 @@
+{
+  "locations": [
+    {
+      "location": 1,
+      "text": "When the king called, the best representatives of all the intelligent races of the world answered the summons. They came from different corners of the land, each with great experience and their own story. All of them united for a common purpose — to protect the kingdom from an unknown threat. And now, before you stands a choice — who do you want to be in this grand adventure?",
+      "links": [
+        {
+          "file": "",
+          "location": 2,
+          "text": "Human",
+          "commands": ""
+        },
+        {
+          "file": "",
+          "location": 3,
+          "text": "Elf",
+          "commands": ""
+        },
+        {
+          "file": "assets/data/start.json",
+          "location": 1,
+          "text": "Return to Main Menu",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 2,
+      "text": "Humans — one of the youngest but most numerous races in the world. They are known for their adaptability, determination, and desire to achieve great goals, even if it means facing great dangers. Humans can vary in character, from peaceful and thoughtful to brave and fearless. Their strength lies in their ability to unite and find solutions even in the most difficult situations. While humans don't live as long as some other races, their thirst for knowledge and desire for self-improvement give them great potential.",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Choose",
+          "commands": "player.race = 'Human'"
+        },
+        {
+          "file": "",
+          "location": 1,
+          "text": "Back",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    },
+    {
+      "location": 3,
+      "text": "Elves — an ancient and noble race that has existed long before humans. They are known for their grace, deep connection to nature, and extraordinarily long lives. Elves are typically reserved, wise, and careful in their decisions. Their view of the world has been shaped by centuries of observation and experience. They are highly skilled in magic and often seek harmony, avoiding needless cruelty. Yet despite their calm nature, elves will fiercely defend what they hold sacred.",
+      "links": [
+        {
+          "file": "",
+          "location": 1,
+          "text": "Choose",
+          "commands": "player.race = 'Elf'"
+        },
+        {
+          "file": "",
+          "location": 1,
+          "text": "Back",
+          "commands": ""
+        }
+      ],
+      "commands": ""
+    }
+  ]
+}
