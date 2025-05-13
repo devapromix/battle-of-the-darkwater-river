@@ -3,6 +3,12 @@ local game = {
 	background = nil,
 	current_file = nil,
 	
+	combat = {
+		enemy_name = "",
+		enemy_health = 0,
+		enemy_max_health = 0,
+	},
+	
 	locations = {},
 	
 	text = "",
@@ -144,6 +150,15 @@ function game.go_to_location(index)
 			game.load_location(game.links.location[index])
 		end
 	end
+end
+
+function game.start_combat()
+	game.combat.enemy_name = "Wolf"
+end
+
+function game.draw_combat()
+	game.text = game.combat.enemy_name .. " A hungry wild wolf snarls at you, its fur bristling and eyes burning with fury. It has spent most of its life in this forest, surviving through battles for food and territory. Its body is covered in scars — marks of countless fights — yet its gaze still burns with wild determination. Health: 30/30"
+
 end
 
 return game

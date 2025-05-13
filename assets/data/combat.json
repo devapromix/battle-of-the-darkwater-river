@@ -1,0 +1,17 @@
+{
+  "locations": [
+    {
+      "location": 1,
+      "text": "",
+      "links": [
+        {
+          "file": "assets/data/forest.json",
+          "location": 1,
+          "text": "Run",
+          "commands": ""
+        }
+      ],
+      "commands": "game.draw_combat()"
+    }
+  ]
+}
