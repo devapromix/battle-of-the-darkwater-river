@@ -11,7 +11,7 @@
           "commands": ""
         }
       ],
-      "commands": "game.draw_combat()"
+      "commands": "combat.draw()"
     }
   ]
 }

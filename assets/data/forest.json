@@ -14,7 +14,7 @@
           "file": "assets/data/combat.json",
           "location": 1,
           "text": "Venture deeper into the forest",
-          "commands": "game.start_combat()"
+          "commands": "combat.start()"
         }
       ],
       "commands": ""

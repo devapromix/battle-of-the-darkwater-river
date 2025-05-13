@@ -1,7 +1,7 @@
 config = {
 	font = {
 		width = 25,
-		height = 35,
+		height = 40,
 	},
 	
 	text = {
@@ -23,7 +23,7 @@ config = {
 	},
 	
 	game = {
-		name = 'Битва у Темноводной Реки',
+		name = 'LotBD',
 		version = '0.1',
 	},
 	
@@ -48,7 +48,7 @@ function love.conf (t)
 	t.window.display = 1
 	t.window.resizable = false
 	t.window.vsync = false
-	t.identity = 'BattleoftheDarkwaterRiver'..config.game.version
+	t.identity = 'LegendOfTheBlackDragon'..config.game.version
 	t.window.title = config.game.name
 	t.window.width = window.width
 	t.window.height = window.height

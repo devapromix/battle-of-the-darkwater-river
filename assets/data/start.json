@@ -2,18 +2,18 @@
   "locations": [
     {
       "location": 1,
-      "text": "This story began in those distant times when magic still existed in the world, and fierce dragons soared freely across the sky. The most dangerous of them was the Green Dragon — ancient, intelligent, and merciless. His name faded from songs, but not from the world's memory. When he awoke from his long slumber, cities fell, and the land was consumed by fear. People once again searched for a hero — one who could stand against fire and darkness.",
+      "text": "This story began in those distant times when magic still existed in the world, and fierce dragons soared freely across the sky. The most dangerous of them was the Black Dragon — ancient, intelligent, and merciless. His name faded from songs, but not from the world's memory. When he awoke from his long slumber, cities fell, and the land was consumed by fear. People once again searched for a hero — one who could stand against fire and darkness.",
       "links": [
         {
           "file": "assets/data/race.json",
           "location": 1,
-          "text": "Start New Game",
+          "text": "Start game",
           "commands": ""
         },
         {
           "file": "",
           "location": 2,
-          "text": "Quit Game",
+          "text": "Quit game",
           "commands": ""
         }
       ],
@@ -21,7 +21,7 @@
     },
     {
       "location": 2,
-      "text": "Are you sure you want to quit?",
+      "text": "Are you sure you want to quit the game?",
       "links": [
         {
           "file": "",
@@ -32,7 +32,7 @@
         {
           "file": "",
           "location": 0,
-          "text": "Yes, exit game",
+          "text": "Yes, quit game",
           "commands": "love.event.quit()"
         }
       ],

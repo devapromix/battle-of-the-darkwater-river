@@ -3,12 +3,6 @@ local game = {
 	background = nil,
 	current_file = nil,
 	
-	combat = {
-		enemy_name = "",
-		enemy_health = 0,
-		enemy_max_health = 0,
-	},
-	
 	locations = {},
 	
 	text = "",
@@ -67,15 +61,28 @@ function game.draw_location()
 end
 
 function game.draw_panel()
-	local y = 1
-	love.graphics.print(player.name, config.panel.left, y * config.font.height)
-	y = y + 1
-	love.graphics.print("Race: " .. player.race, config.panel.left, y * config.font.height)
-	y = y + 1
-	love.graphics.print("Class: " .. player.class, config.panel.left, y * config.font.height)
-	y = y + 1
-	love.graphics.print("Health: " .. player.health .. "/" .. player.max_health, config.panel.left, y * config.font.height)
-	inventory.draw(y)
+    local x = config.panel.left
+    local font_height = config.font.height
+    local y = font_height
+    local graphics = love.graphics
+    local player = player
+
+    local panel_data = {
+        player.name,
+        "Level: " .. player.level,
+        "Exp: " .. player.exp.to_string(),
+        "Race: " .. player.race,
+        "Class: " .. player.class,
+        "Health: " .. player.health.to_string(),
+        "Mana: " .. player.mana.to_string()
+    }
+
+    for i, text in ipairs(panel_data) do
+        graphics.print(text, x, y)
+        y = y + font_height
+    end
+
+    inventory.draw((y / font_height) - 1)
 end
 
 function game.load_location(index)
@@ -122,23 +129,10 @@ function game.mousepressed(x, y)
 end
 
 function game.keypressed(key)
-	local line = 0
-	if key == "1" then
-		line = 1
-	elseif key == "2" then
-		line = 2
-	elseif key == "3" then
-		line = 3
-	elseif key == "4" then
-		line = 4
-	elseif key == "5" then
-		line = 5
-	elseif key == "6" then
-		line = 6
-	elseif key == "7" then
-		line = 7
-	end
-	game.go_to_location(line)
+    local line = tonumber(key)
+    if line and line >= 1 and line <= 7 then
+        game.go_to_location(line)
+    end
 end
 
 function game.go_to_location(index)
@@ -150,15 +144,6 @@ function game.go_to_location(index)
 			game.load_location(game.links.location[index])
 		end
 	end
-end
-
-function game.start_combat()
-	game.combat.enemy_name = "Wolf"
-end
-
-function game.draw_combat()
-	game.text = game.combat.enemy_name .. " A hungry wild wolf snarls at you, its fur bristling and eyes burning with fury. It has spent most of its life in this forest, surviving through battles for food and territory. Its body is covered in scars — marks of countless fights — yet its gaze still burns with wild determination. Health: 30/30"
-
 end
 
 return game
