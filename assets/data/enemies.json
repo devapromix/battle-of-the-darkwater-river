@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Gray Wolf",
+    "weapon": "Fangs",
+    "level": 1,
+    "health": 20,
+    "armor": 0,
+    "damage": "2-3",
+    "experience": 10
+  },
+  {
+    "name": "Goblin Rogue",
+    "weapon": "Rusty Dagger",
+    "level": 3,
+    "health": 25,
+    "armor": 2,
+    "damage": "3-4",
+    "experience": 15
+  },
+  {
+    "name": "Giant Spider",
+    "weapon": "Venomous Fangs",
+    "level": 1,
+    "health": 30,
+    "armor": 1,
+    "damage": "4-5",
+    "experience": 20
+  }
+]
