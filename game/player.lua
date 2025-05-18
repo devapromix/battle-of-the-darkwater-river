@@ -14,6 +14,11 @@ local player = {
 		cur = 100,
 		max = 100,
 	},
+	damage = {
+		min = 2,
+		max = 3,
+	},
+	armor = 0,
 }
 
 function player.clear()
@@ -24,6 +29,9 @@ function player.clear()
 	player.exp.cur = 0
 	player.health.to_max()
 	player.mana.to_max()
+	player.damage.min = 2
+	player.damage.max = 3
+	player.armor = 0
 end
 
 function player.exp.to_string()
@@ -91,6 +99,9 @@ function player.mana.modify(value)
 	end
 end
 
+function player.damage.to_string()
+	return player.damage.min .. "-" .. player.damage.max
+end
 
 
 

@@ -16,6 +16,7 @@ local game = {
 }
 
 function game.load()
+	event.load()
 	game.background = love.graphics.newImage("assets/backgrounds/background.png")
 	game.load_location_from_file(1, "assets/data/start.json")
 end
@@ -74,7 +75,9 @@ function game.draw_panel()
         "Race: " .. player.race,
         "Class: " .. player.class,
         "Health: " .. player.health.to_string(),
-        "Mana: " .. player.mana.to_string()
+        "Mana: " .. player.mana.to_string(),
+		"Damage:" .. player.damage.to_string(),
+		"Armor:" .. player.armor,
     }
 
     for i, text in ipairs(panel_data) do
