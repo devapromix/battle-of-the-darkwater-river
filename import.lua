@@ -6,6 +6,7 @@ libtimer = require("libraries.timer")
 
 button = require("game.button")
 player = require("game.player")
+equipment = require("game.equipment")
 inventory = require("game.inventory")
 event = require("game.event")
 mouse = require("game.mouse")

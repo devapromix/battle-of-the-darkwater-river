@@ -81,7 +81,7 @@ end
 
 function inventory.draw(y)
 	y = y + 2
-    love.graphics.print("INVENTORY:", config.panel.left, y * config.font.height)
+    love.graphics.print("INVENTORY", config.panel.left, y * config.font.height)
 	y = y + 1
     if next(inventory.items) == nil then
         love.graphics.print("(empty)", config.panel.left, y * config.font.height)

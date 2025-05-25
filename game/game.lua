@@ -76,8 +76,8 @@ function game.draw_panel()
         "Class: " .. player.class,
         "Health: " .. player.health.to_string(),
         "Mana: " .. player.mana.to_string(),
-		"Damage:" .. player.damage.to_string(),
-		"Armor:" .. player.armor,
+		"Attack: " .. player.damage.to_string(),
+		"Defense: " .. player.armor,
     }
 
     for i, text in ipairs(panel_data) do
@@ -85,7 +85,9 @@ function game.draw_panel()
         y = y + font_height
     end
 
-    inventory.draw((y / font_height) - 1)
+    equipment.draw(9)
+	
+    inventory.draw(13)
 end
 
 function game.load_location(index)

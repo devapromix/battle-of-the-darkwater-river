@@ -13,7 +13,7 @@ config = {
 	},
 	
 	inventory = {
-		max_slots = 12,
+		max_slots = 10,
 	},
 	
 	debug = true,
@@ -35,8 +35,6 @@ config = {
 window = {
 	width = 1920,
 	height = 1080,
-	--width = 1280,
-	--height = 800,
 	fullscreen = true,
 }
 
@@ -48,7 +46,7 @@ function love.conf (t)
 	t.window.display = 1
 	t.window.resizable = false
 	t.window.vsync = false
-	t.identity = 'LegendOfTheBlackDragon'..config.game.version
+	t.identity = "LegendOfTheBlackDragon"
 	t.window.title = config.game.name
 	t.window.width = window.width
 	t.window.height = window.height
