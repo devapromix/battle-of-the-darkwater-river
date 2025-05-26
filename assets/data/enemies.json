@@ -2,6 +2,7 @@
 	"enemies": [
 		{
 			"name": "Gray Wolf",
+			"image": "assets/images/enemies/gray_wolf.png",
 			"weapon": "Fangs",
 			"level": 1,
 			"health": 20,
@@ -11,6 +12,7 @@
 		},
 		{
 			"name": "Goblin Rogue",
+			"image": "",
 			"weapon": "Rusty Dagger",
 			"level": 1,
 			"health": 25,
@@ -20,6 +22,7 @@
 		},
 		{
 			"name": "Giant Spider",
+			"image": "assets/images/enemies/giant_spider.png",
 			"weapon": "Venomous Fangs",
 			"level": 1,
 			"health": 30,
