@@ -12,4 +12,5 @@ event = require("game.event")
 mouse = require("game.mouse")
 game = require("game.game")
 font = require("game.font")
+enemy = require("game.enemy")
 

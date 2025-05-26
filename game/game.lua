@@ -16,6 +16,7 @@ local game = {
 }
 
 function game.load()
+	enemy.load()
 	event.load()
 	game.background = love.graphics.newImage("assets/backgrounds/background.png")
 	game.load_location_from_file(1, "assets/data/start.json")

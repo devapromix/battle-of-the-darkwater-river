@@ -15,7 +15,7 @@ function event.start(loc)
 	if event.location == "forest" then
 		if love.math.random(3) < 3 then 
 			event.ident = "forest.combat"
-			event.enemy.name = "Dire Wolf"
+			event.enemy.name = enemy.enemies[1]["name"]
 		else
 			event.ident = "forest.event"
 		end
