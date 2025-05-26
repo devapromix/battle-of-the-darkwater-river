@@ -3,6 +3,7 @@
 		{
 			"name": "Gray Wolf",
 			"image": "assets/images/enemies/gray_wolf.png",
+			"description": "A hungry wild wolf snarls at you, its fur bristling and eyes burning with fury. It has spent most of its life in this forest, surviving through battles for food and territory. Its body is covered in scars — marks of countless fights — yet its gaze still burns with wild determination.",
 			"weapon": "Fangs",
 			"level": 1,
 			"health": 20,
@@ -13,6 +14,7 @@
 		{
 			"name": "Goblin Rogue",
 			"image": "",
+			"description": "A cunning goblin lurks in the shadows of the forest, gripping a dagger in its clawed hand. Its eyes glint with malice as it crouches low, ready to pounce. The creature is lean and wiry, its skin a mottled green-grey, scarred and grimy from years of ambushes and bloodshed. It moves with eerie silence, blending into the darkness like a phantom. This forest is its home — and its hunting ground — and tonight, you are the prey.",
 			"weapon": "Rusty Dagger",
 			"level": 1,
 			"health": 25,
@@ -23,6 +25,7 @@
 		{
 			"name": "Giant Spider",
 			"image": "assets/images/enemies/giant_spider.png",
+			"description": "A monstrous spider looms among the twisted roots and shadows of the forest, its many eyes glinting like cold black gems. Its hairy limbs move with unnatural grace, silent and deliberate, as it crawls across the damp earth. The creature’s bloated body is marked with pale scars and patches of hardened chitin — trophies of countless skirmishes in the dark. It does not rush. It waits, patient and cruel, for its next victim to stumble too close.",
 			"weapon": "Venomous Fangs",
 			"level": 1,
 			"health": 30,

@@ -28,7 +28,7 @@ end
 function event.draw()
 	if event.location == "forest" then
 		if event.ident == "forest.combat" then
-			game.text = event.enemy.name .. ": A hungry wild wolf snarls at you, its fur bristling and eyes burning with fury. It has spent most of its life in this forest, surviving through battles for food and territory. Its body is covered in scars — marks of countless fights — yet its gaze still burns with wild determination. Health: 30/30"
+			game.text = event.enemy.name .. ": Health: 30/30"
 		elseif event.ident == "forest.event" then
 			game.text = "Event: Find gold event..."
 		end
