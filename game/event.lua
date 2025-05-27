@@ -3,6 +3,7 @@ local event = {
 	ident = "",
 	enemy = {
 		name = "",
+		description = "",
 	},
 }
 
@@ -16,6 +17,7 @@ function event.start(loc)
 		if love.math.random(3) < 3 then 
 			event.ident = "forest.combat"
 			event.enemy.name = enemy.enemies[1]["name"]
+			event.enemy.description = enemy.enemies[1]["description"]
 		else
 			event.ident = "forest.event"
 		end
@@ -28,7 +30,7 @@ end
 function event.draw()
 	if event.location == "forest" then
 		if event.ident == "forest.combat" then
-			game.text = event.enemy.name .. ": Health: 30/30"
+			game.text = event.enemy.name .. " " .. event.enemy.description .. ": Health: 30/30"
 		elseif event.ident == "forest.event" then
 			game.text = "Event: Find gold event..."
 		end

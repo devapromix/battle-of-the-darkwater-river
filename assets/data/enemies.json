@@ -13,7 +13,7 @@
 		},
 		{
 			"name": "Goblin Rogue",
-			"image": "",
+			"image": "assets/images/enemies/goblin_rogue.png",
 			"description": "A cunning goblin lurks in the shadows of the forest, gripping a dagger in its clawed hand. Its eyes glint with malice as it crouches low, ready to pounce. The creature is lean and wiry, its skin a mottled green-grey, scarred and grimy from years of ambushes and bloodshed. It moves with eerie silence, blending into the darkness like a phantom. This forest is its home — and its hunting ground — and tonight, you are the prey.",
 			"weapon": "Rusty Dagger",
 			"level": 1,
