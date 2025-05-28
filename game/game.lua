@@ -5,6 +5,7 @@ local game = {
 	
 	locations = {},
 	
+	image = nil,
 	text = "",
 	links = {
 		file = {},
@@ -34,7 +35,8 @@ function game.clear_location()
 		location = {},
 		commands = {}
 	}
-	commands = {}
+	game.image = nil
+	game.commands = {}
 end
 
 function game.execute_commands(commands)
@@ -53,12 +55,13 @@ end
 
 function game.draw_location()
 	--love.graphics.draw(game.background, 0, 0)
+	if game.image ~= nil then love.graphics.draw(game.image, 20, 20) end
 	game.lines = string.split_text(game.text, config.text.width)
 	for i = 1, #game.lines do
-		love.graphics.print(game.lines[i], config.font.width, i * config.font.height)
+		love.graphics.print(game.lines[i], config.font.width, i * config.font.height + config.image.height)
 	end
 	for i = 1, #game.links.text do
-		love.graphics.print(i..". "..game.links.text[i], config.font.width, (#game.lines + i + 1) * config.font.height)
+		love.graphics.print(i..". "..game.links.text[i], config.font.width, (#game.lines + i + 1) * config.font.height + config.image.height)
 	end
 end
 
@@ -94,6 +97,10 @@ end
 function game.load_location(index)
 	game.clear_location()
 	if index <= #game.locations then
+		local image_path = game.locations[index]["image"]
+		if image_path~= nil and image_path ~= "" then
+			game.image = love.graphics.newImage(image_path)
+		end
 		game.text = game.locations[index]["text"]
 		game.commands = game.locations[index]["commands"]
 		game.execute_commands(game.commands)
@@ -124,9 +131,9 @@ function game.mousepressed(x, y)
 	local line = 0
 	for i = 1, 7 do
 		if mouse.in_rect(config.font.width, 
-			(#game.lines + i + 1) * config.font.height, 
+			(#game.lines + i + 1) * config.font.height + config.image.height, 
 			window.width - (config.font.width * 2), 
-			config.font.height) then
+			config.font.height + config.image.height) then
 			line = i
 			break
 		end

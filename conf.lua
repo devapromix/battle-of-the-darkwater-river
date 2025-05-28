@@ -1,7 +1,7 @@
 config = {
 	font = {
-		width = 25,
-		height = 40,
+		width = 20,
+		height = 30,
 	},
 	
 	text = {
@@ -9,7 +9,11 @@ config = {
 	},
 	
 	panel = {
-		left = 1350,
+		left = 1340,
+	},
+	
+	image = {
+		height = 600,
 	},
 	
 	inventory = {

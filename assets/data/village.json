@@ -2,6 +2,7 @@
   "locations": [
     {
       "location": 1,
+	  "image": "assets/images/locations/village.png",
       "text": "You are standing in the village’s central square — a spacious area surrounded by old buildings. In the very center rises a mighty oak, its thick trunk and sprawling branches casting shade over the cracked cobblestones. On one side of the square stands a tavern, lively voices drifting from within, while on the other are several shops offering various goods. In the air, you hear the rhythmic ring of a hammer coming from a nearby smithy. The village seems peaceful, yet there's a subtle feeling of anticipation — as if something is about to happen.",
       "links": [
         {
@@ -21,6 +22,7 @@
     },
     {
       "location": 2,
+	  "image": "assets/images/locations/village.png",
       "text": "Are you sure you want to quit the game?",
       "links": [
         {

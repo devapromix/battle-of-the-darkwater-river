@@ -2,6 +2,7 @@
   "locations": [
     {
       "location": 1,
+	  "image": "assets/images/enemies/gray_wolf.png",
       "text": "You stand before the wooden gates of a small village. The morning chill still lingers, and the dust of the road clings to your boots. Ahead lies an unfamiliar place — full of promises and unease. The village appears peaceful, yet there is something tense in that calm, as if the locals have long been expecting something — or someone. You have just arrived, and every step forward may reveal more than just the street beyond the gate.",
       "links": [
         {
