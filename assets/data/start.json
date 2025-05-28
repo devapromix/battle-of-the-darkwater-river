@@ -2,6 +2,7 @@
   "locations": [
     {
       "location": 1,
+	  "image": "assets/images/enemies/goblin_rogue.png",
       "text": "This story began in those distant times when magic still existed in the world, and fierce dragons soared freely across the sky. The most dangerous of them was the Black Dragon — ancient, intelligent, and merciless. His name faded from songs, but not from the world's memory. When he awoke from his long slumber, cities fell, and the land was consumed by fear. People once again searched for a hero — one who could stand against fire and darkness.",
       "links": [
         {

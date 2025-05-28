@@ -2,6 +2,7 @@
   "locations": [
     {
       "location": 1,
+	  "image": "assets/images/locations/dark_forest.png",
       "text": "The forest greets you with a silence that feels unnatural. A dim twilight lingers between the tall trunks, and the thick canopy overhead lets through almost no light. Now and then, you hear rustling, but it’s hard to tell—wind in the branches or something else. It’s easy to lose both your sense of direction and your peace of mind here. You feel as though everything around you is watching.",
       "links": [
         {

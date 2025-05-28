@@ -5,7 +5,7 @@ config = {
 	},
 	
 	text = {
-		width = 55,
+		width = 73,
 	},
 	
 	panel = {
