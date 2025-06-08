@@ -7,6 +7,12 @@
         {
           "file": "assets/data/forest.json",
           "location": 1,
+          "text": "Examine enemy",
+          "commands": "event.start('examine')"
+        },
+        {
+          "file": "assets/data/forest.json",
+          "location": 1,
           "text": "Run",
           "commands": ""
         }

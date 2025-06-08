@@ -38,7 +38,7 @@
 		},
 		{
 			"name": "Black Dragon",
-			"image": "assets/images/enemies/black_dragon.png",
+			"image": "assets/images/boss/black_dragon.png",
 			"description": "A colossal black dragon looms in the cavern, its scales shimmering like polished obsidian. Its eyes glow with ancient malice, and its breath reeks of sulfur and death. Massive wings cast shadows that seem to swallow the light, while its claws, scarred from centuries of battle, scrape against the stone floor. This is no mere beast — it is a force of nature, ancient and unstoppable.",
 			"weapon": "Fiery Breath",
 			"level": 5,

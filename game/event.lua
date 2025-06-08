@@ -58,6 +58,8 @@ function event.start(loc)
                 break
             end
         end
+    elseif event.location == "examine" then
+		game.text = event.enemy.name
     end
 end
 
@@ -84,7 +86,7 @@ function event.draw()
                 break
             end
         end
-        game.text = event.enemy.name .. " " .. event.enemy.description .. ": Health: " .. (enemy_data and enemy_data.health or 100) .. "/" .. (enemy_data and enemy_data.health or 100)
+        game.text = event.enemy.name .. " " .. event.enemy.description .. " Enemy health: " .. (enemy_data and enemy_data.health or 100) .. "/" .. (enemy_data and enemy_data.health or 100)
         game.image = love.graphics.newImage(event.enemy.image)
     end
 end
