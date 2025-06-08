@@ -9,7 +9,8 @@
 			"health": 20,
 			"armor": 0,
 			"damage": "2-3",
-			"experience": 10
+			"experience": 10,
+			"rarity": "common"
 		},
 		{
 			"name": "Goblin Rogue",
@@ -20,7 +21,8 @@
 			"health": 25,
 			"armor": 2,
 			"damage": "3-4",
-			"experience": 15
+			"experience": 15,
+			"rarity": "common"
 		},
 		{
 			"name": "Giant Spider",
@@ -31,7 +33,20 @@
 			"health": 30,
 			"armor": 1,
 			"damage": "4-5",
-			"experience": 20
+			"experience": 20,
+			"rarity": "common"
+		},
+		{
+			"name": "Black Dragon",
+			"image": "assets/images/enemies/black_dragon.png",
+			"description": "A colossal black dragon looms in the cavern, its scales shimmering like polished obsidian. Its eyes glow with ancient malice, and its breath reeks of sulfur and death. Massive wings cast shadows that seem to swallow the light, while its claws, scarred from centuries of battle, scrape against the stone floor. This is no mere beast — it is a force of nature, ancient and unstoppable.",
+			"weapon": "Fiery Breath",
+			"level": 5,
+			"health": 100,
+			"armor": 10,
+			"damage": "10-15",
+			"experience": 100,
+			"rarity": "unique"
 		}
 	]
 }
