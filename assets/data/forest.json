@@ -16,6 +16,12 @@
           "location": 1,
           "text": "Venture deeper into the forest",
           "commands": "event.start('forest')"
+        },
+		{
+			"file": "assets/data/combat.json",
+			"location": 1,
+			"text": "Explore the mysterious cave",
+			"commands": "event.start('dragoncave')"
         }
       ],
       "commands": ""
