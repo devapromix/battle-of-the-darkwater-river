@@ -53,6 +53,10 @@ function game.execute_commands(commands)
     end
 end
 
+function game.get_line_top(i)
+	return (#game.lines + i + 1) * config.font.height + config.image.height
+end
+
 function game.draw_location()
 	--love.graphics.draw(game.background, 0, 0)
 	if game.image ~= nil then love.graphics.draw(game.image, 20, 20) end
@@ -61,7 +65,7 @@ function game.draw_location()
 		love.graphics.print(game.lines[i], config.font.width, i * config.font.height + config.image.height)
 	end
 	for i = 1, #game.links.text do
-		love.graphics.print(i..". "..game.links.text[i], config.font.width, (#game.lines + i + 1) * config.font.height + config.image.height)
+		love.graphics.print(i..". "..game.links.text[i], config.font.width, game.get_line_top(i))
 	end
 end
 
@@ -131,9 +135,9 @@ function game.mousepressed(x, y)
 	local line = 0
 	for i = 1, 7 do
 		if mouse.in_rect(config.font.width, 
-			(#game.lines + i + 1) * config.font.height + config.image.height, 
+			game.get_line_top(i), 
 			window.width - (config.font.width * 2), 
-			config.font.height + config.image.height) then
+			config.font.height) then
 			line = i
 			break
 		end
